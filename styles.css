@@ -43,7 +43,8 @@ or
     justify-content: space-around;
     width:35%;
 }
-.nav-lonks li{
+/* removes the bullet points from <li> */
+.nav-links li{
     list-style:none;
 }
 
@@ -55,14 +56,62 @@ or
     font-size:14px;
 }
 
-.burger{
+.apple{
     display:none;
+    /* change to block to make no longer hidden */
+
+    cursor: pointer;
 }
 
-.burger div{
+.apple div{
     width:25px;
     height:3px;
     background-color: white;
     margin:5px;
+
+}
+body{
+    /* can no longer scroll to the sidebar */
+    overflow-x: hidden;
+}
+.nav-links{
+    position: absolute;
+    right:0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5D4954;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+
+    /* moves the sidebar off the screen */
+    transform:translateX(100%);
     
+
+    transition: transform 0.5s ease-in;
+}
+
+.nav-links li{
+    opacity: 0;
+}
+
+.apple{
+    display: block;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+/* we will run this animtion from our js*/
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform:translateX(0px);
+    }
 }
