@@ -1,0 +1,68 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/* 
+width = width + padding + border
+height = height + paddinig + border
+
+often means it appears bigger then what you set it because you 
+have to take into account the other factors
+
+so to eliminate these factors we can use box-sizing: border-box
+to keep it all the same proportions
+*/
+
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5D4954;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* you can use 
+    .p1
+or 
+    div.p1
+*/
+
+.logo{
+    /* the link text remains blue because it is a link */
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width:35%;
+}
+.nav-lonks li{
+    list-style:none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.burger{
+    display:none;
+}
+
+.burger div{
+    width:25px;
+    height:3px;
+    background-color: white;
+    margin:5px;
+    
+}
